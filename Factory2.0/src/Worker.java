@@ -4,28 +4,29 @@
 import java.io.Serializable;
 public class Worker implements Cloneable, Serializable {
      String name;
-     Detail doingDetail;
+     int skill;
 
 
-    public Worker(String name, Detail doingDetail ) {
+
+    public Worker(String name, int skill ) {
         this.setName(name);
-        this.setDoingDetail(doingDetail);
+        this.setSkill(skill);
 
     }
 
     public Worker(Worker otherWorker) {
         this.setName(otherWorker.getName());
-        this.setDoingDetail(otherWorker.getDoingDetail());
+        this.setSkill(otherWorker.getSkill());
 
 
     }
 
-    public Detail getDoingDetail() {
-        return doingDetail;
+    public int getSkill() {
+        return skill;
     }
 
-    public void setDoingDetail(Detail doingDetail) {
-        this.doingDetail = doingDetail;
+    public void setSkill(int skill) {
+        this.skill = skill;
     }
 
     public String getName() {
@@ -37,9 +38,9 @@ public class Worker implements Cloneable, Serializable {
     }
 
     public String toString() {
-        return "Name: " + this.getName() + ". Made in "
-                + this.getDoingDetail().getContry() + ", "
-                + this.getDoingDetail().getContry();
+        return "Name: " + this.getName() + ". His skill is "
+                + this.getSkill()//.getContry() + ", "
+                + this.getSkill();//.getContry();
     }
 
     public Worker clone() throws CloneNotSupportedException {
@@ -50,6 +51,10 @@ public class Worker implements Cloneable, Serializable {
 
     }
 
+
+    public void setSkill(Worker worker2) {
+
     }
+}
 
 
